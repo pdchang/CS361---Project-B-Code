@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title>Smart Farming - CS 361 - Group 14 </title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!--using leaflet open library for javascript for the maps-->
+
+  </head>
+  <body>
+    <div class = "weather" div>
+      <form>
+        <fieldset class = "params">
+          <legend>Get Weather</legend>
+          <br>
+          <label for "geo" class = "geo"> Geographic Coordinates: </label><br>
+          <input type = "text" class = "lat" name = "lat" id = "lat" placeholder = "Latitude"><span>°</span>
+          <input type = "text" class = "long" name = "long" id = "long" placeholder = "Longitude"><span>°</span>
+          <br><br>
+      <!--
+dont need this, should display all the maps
+      <label for "overlay" class = "overlay">Pick a Map Overlay</label><br>
+          <input type="radio" name="maplayer" value="clouds"> Clouds
+          <input type="radio" name="maplayer" value="precipitation"> Precipitation
+          <input type="radio" name="maplayer" value="pressure"> Pressure
+          <input type="radio" name="maplayer" value="windspeed"> Wind Speed
+          <input type="radio" name="maplayer" value="temperature"> Temperature
+          <br><br>
+also w'ere using weatherunderground map now
+        -->
+          <input type = "submit" id = "submit">
+        </fieldset>
+      </form>
+      <form>
+        <fieldset id = "place" class = "place">
+      <fieldset>
+      <div id = "results1"> <legend> Current Conditions:  </legend><br /></div>
+      </fieldset>
+        <fieldset>
+        <div id = "results2"> <legend> Daily Forecast:  </legend><br /></div>
+        </fieldset>
+        <fieldset>
+        <div id = "results3"> <legend> 5 Day Forecast:  </legend><br />
+        <table id = "five" border = "1"></table>
+        </div>
+        </fieldset>
+  </fieldset>
+    <fieldset>
+      <div id = "map"><legend>Current Weather Map </legend><fieldset id = "mapid"></fieldset><br/> </div>
+    </fieldset>
+    <!-- inputting usda hardiness map, this is the best i could come up with for crop data without using awhere, a lot of the other apis
+  are too specific as in you have to type in crop and what not and it lsits too much info, so this is just proof of concept-->
+    <fieldset><legend>US Plant Hardiness Map</legend><div><img src="hard.jpg" alt="usplanthard"><br><figcaption class = "stuff">Credit: USDA-ARS and Oregon State University (OSU)</figcaption>
+      <figcaption class = "stuff"><a href = "http://planthardiness.ars.usda.gov/PHZMWeb/Downloads.aspx">Click to view Source and related maps</a></figcaption></div></fieldset>
+    </div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
